@@ -25,6 +25,7 @@ function loadTodos() {
         // algo asi:
         // addTodo(data[i]._id, data[i].description, data[i].completed)
         // no tienen que usar la funcion de addTodo, es un ejemplo
+        $('#todo-list').append(`<li><input type="checkbox" name="todo"><span>${data[i].description}</span></li>`)
       }
     },
     error: function(error_msg) {
@@ -65,7 +66,7 @@ input.addEventListener('keypress', function (event) {
       success: function(data){
         console.log(data)
         // agregar código aqui para poner los datos del todolist en el el html
-        
+        $('#todo-list').append(`<li><input type="checkbox" name="todo"><span>${data.description}</span></li>`)
       },
       error: function(error_msg) {
         alert((error_msg['responseText']));
