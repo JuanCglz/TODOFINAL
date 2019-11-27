@@ -8,8 +8,8 @@ var todos = document.querySelectorAll("input[type=checkbox]");
 
 function loadTodos() {
   $.ajax({
-    url: 'http://localhost:3000/todos',
-    // url: 'https://tuapp.herokuapp.com/todos',
+    //url: 'http://localhost:3000/todos',
+    url: 'https://final00813022.herokuapp.com/todos',
     headers: {
         'Content-Type':'application/json',
         'Authorization': 'Bearer ' + token
@@ -54,8 +54,8 @@ input.addEventListener('keypress', function (event) {
     };
     json_to_send = JSON.stringify(json_to_send);
     $.ajax({
-      url: 'http://localhost:3000/todos',
-      // url: 'https://tuapp.herokuapp.com/todos',
+      //url: 'http://localhost:3000/todos',
+      url: 'https://final00813022.herokuapp.com/todos',
       headers: {
           'Content-Type':'application/json',
           'Authorization': 'Bearer ' + token
@@ -77,6 +77,6 @@ input.addEventListener('keypress', function (event) {
 })
 
 
-function addTodo(id, todoText, completed) {
+// function addTodo(id, todoText, completed) {
   
-}
+// }
